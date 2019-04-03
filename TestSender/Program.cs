@@ -12,7 +12,7 @@ namespace TestSender
             var channel = Signal.CreateRecieverChannel("signals.test");
 
             Signal.CallEvent(channel, new PingArg { Message = "hello world" });
-            Signal.CollectShared(channel);
+            Signal.CollectAllShared(channel);
 
             Console.ReadLine();
         }
